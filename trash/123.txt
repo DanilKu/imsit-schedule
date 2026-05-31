@@ -1,0 +1,12 @@
+gggggggg4213asdasd
+
+
+                <button class="btn-back btn-back-test" onclick="showInternetMessage()">
+                    <i class="fas fa-wifi"></i>
+                    Показать сообщение о проблемах
+                </button>
+                
+                <button class="btn-back btn-back-test" onclick="testQuickMessage()" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                    <i class="fas fa-bolt"></i>
+                    Быстрый тест (3 сек)
+                </button>

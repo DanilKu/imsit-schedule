@@ -1,0 +1,11 @@
+<svg width="750" height="1100" viewBox="0 0 750 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="750" height="1100" fill="#0B1120"/>
+  <rect x="60" y="60" width="630" height="980" rx="32" fill="#111827" stroke="#1F2937" stroke-width="4" stroke-dasharray="8 10"/>
+  <text x="50%" y="48%" dominant-baseline="middle" text-anchor="middle" fill="#F3F4F6" font-family="Inter, sans-serif" font-size="42" font-weight="600">
+    Этаж 3
+  </text>
+  <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="20">
+    Здесь будет 3 этаж
+  </text>
+</svg>
+

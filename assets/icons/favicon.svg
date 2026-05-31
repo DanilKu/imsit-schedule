@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <!-- Gradient for larger diamond shape -->
+    <linearGradient id="diamondGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff00ff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ff0080" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#8000ff" stop-opacity="0.9"/>
+    </linearGradient>
+    
+    <!-- Gradient for smaller square -->
+    <linearGradient id="squareGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#0080ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0040ff" stop-opacity="0.9"/>
+    </linearGradient>
+    
+    <!-- Glow effect filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Inner shadow for depth -->
+    <filter id="innerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+      <feOffset dx="2" dy="2" result="offset"/>
+      <feFlood flood-color="#000000" flood-opacity="0.3"/>
+      <feComposite in2="offset" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Dark background -->
+  <rect width="512" height="512" fill="#000000"/>
+  
+  <!-- Larger diamond shape (rotated square) -->
+  <g transform="translate(256, 256) rotate(45)">
+    <!-- Outer glow -->
+    <rect x="-120" y="-120" width="240" height="240" rx="24" ry="24" 
+          fill="url(#diamondGradient)" 
+          filter="url(#glow)" 
+          opacity="0.6"/>
+    
+    <!-- Main diamond shape -->
+    <rect x="-100" y="-100" width="200" height="200" rx="20" ry="20" 
+          fill="url(#diamondGradient)" 
+          filter="url(#innerShadow)"/>
+    
+    <!-- Inner dark area -->
+    <rect x="-80" y="-80" width="160" height="160" rx="16" ry="16" 
+          fill="#1a0033" 
+          opacity="0.8"/>
+  </g>
+  
+  <!-- Smaller square shape -->
+  <g transform="translate(320, 180)">
+    <!-- Outer glow -->
+    <rect x="-40" y="-40" width="80" height="80" rx="16" ry="16" 
+          fill="url(#squareGradient)" 
+          filter="url(#glow)" 
+          opacity="0.7"/>
+    
+    <!-- Main square shape -->
+    <rect x="-35" y="-35" width="70" height="70" rx="14" ry="14" 
+          fill="url(#squareGradient)" 
+          filter="url(#innerShadow)"/>
+    
+    <!-- Inner dark area -->
+    <rect x="-25" y="-25" width="50" height="50" rx="10" ry="10" 
+          fill="#001a33" 
+          opacity="0.8"/>
+  </g>
+  
+  <!-- Subtle reflection on ground -->
+  <ellipse cx="256" cy="420" rx="180" ry="40" 
+           fill="url(#diamondGradient)" 
+           opacity="0.15"/>
+  <ellipse cx="320" cy="380" rx="60" ry="15" 
+           fill="url(#squareGradient)" 
+           opacity="0.2"/>
+</svg>

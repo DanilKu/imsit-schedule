@@ -1,0 +1,13 @@
+# Включение модуля mod_rewrite
+RewriteEngine On
+
+# Главная страница - перенаправление на расписание
+RewriteRule ^$ id.php [L]
+
+# Убираем .php из URL
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Обработка ошибок
+ErrorDocument 404 https://imsit.shop/404.php

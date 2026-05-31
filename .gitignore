@@ -1,0 +1,52 @@
+# Конфигурация с секретами
+config/database.php
+config/database_local.php
+config/blocked_telegram_ids.php
+.env
+.env.local
+
+# IDE и деплой
+.vscode/
+.idea/
+*.sublime-*
+
+# Зависимости
+/vendor/
+/node_modules/
+
+# Резервные и временные файлы
+*.backup
+*.bak
+*~
+id.php_v*.backup
+main_test.php.backup
+
+# Obfuscated / test copies
+id2_obfuscated.php
+obfuscate.php
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log
+
+# Xcode user data
+imsitID_ios/**/xcuserdata/
+imsitID_ios/**/DerivedData/
+
+# Большие SQL-дампы с данными (опционально — раскомментируйте если не нужны в Git)
+# schedule_insert.sql
+
+# Другие проекты в этой папке (не часть системы расписания)
+/galaxy/
+/is/
+/fuflik/
+
+# Тестовые и dev-копии
+id_test.php
+id2.php
+main_test.php
+main_test2.php
+admin_bot_broadcast777.php
